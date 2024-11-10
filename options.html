@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BetBlocker Options</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="styles/bulma.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/options.css">
+    <style>
+        .default-rule {
+            background-color: #f0f0f0;
+        }
+        .default-rule .delete-button {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero is-info is-bold">
+        <h1 id="header" class="title is-2 has-text-centered">
+            <span>
+                BetBlocker
+            </span>
+        </h1>
+    </section>
+
+    <div class="columns">
+        <div class="column is-6 is-offset-3">
+
+            <!-- Status Section -->
+            <h2 id="status-title" class="title is-3">
+                <span class="icon is-medium">
+                    <i class="fa fa-power-off"></i>
+                </span>
+                <span>
+                    Status
+                </span>
+            </h2>
+
+            <div class="field has-addons">
+                <p class="control">
+                    <a id="on-button" class="button">
+                        On
+                    </a>
+                </p>
+                <p class="control">
+                    <a id="off-button" class="button">
+                        Off
+                    </a>
+                </p>
+            </div>
+
+            <p>Isso também pode ser alterado clicando na extensão.</p>
+
+            <!-- Export/Import Section -->
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <h2 class="title is-3">
+                            <span class="icon is-medium">
+                                <i class="fa fa-cogs"></i>
+                            </span>
+                            <span>Exportar / Importar Regras</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-12 has-text-centered">
+                    <button id="export" class="button is-primary">
+                        <span class="icon is-small">
+                            <i class="fa fa-download"></i>
+                        </span>
+                        <span>Exportar Regras</span>
+                    </button>
+
+                    <button id="import" class="button is-info">
+                        <span class="icon is-small">
+                            <i class="fa fa-upload"></i>
+                        </span>
+                        <span>Importar Regras</span>
+                    </button>
+
+                    <!-- Campo de seleção de arquivo para importar -->
+                    <input id="filepicker" type="file" style="display:none" />
+                </div>
+            </div>
+
+            <!-- Blocked Websites Section -->
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <h2 id="rules-title" class="title is-3">
+                            <span class="icon is-medium">
+                                <i class="fa fa-cog"></i>
+                            </span>
+                            <span>
+                                Websites Bloqueados
+                            </span>
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tabela de Websites Bloqueados -->
+            <table class="table is-bordered">
+                <thead>
+                    <tr>
+                        <th>Website</th>
+                        <th>Path (opicional)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="new-rule-row">
+                        <td>
+                            <input id="new-domain" class="input is-small" type="text" placeholder="e.g. facebook.com">
+                            <p id="domain-error" class="help is-danger">
+                                Domínio Inválido
+                            </p>
+                        </td>
+                        <td>
+                            <input id="new-path" class="input is-small" type="text" placeholder="e.g. /messages">
+                            <p id="path-error" class="help is-danger">
+                                Path inválido
+                            </p>
+                        </td>
+                        <td>
+                            <a id="add-rule" class="button is-small is-success">
+                                <span>Add</span>
+                                <span class="icon is-small">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Aqui serão adicionadas as novas regras -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Template de linha de regra -->
+    <template id="rule-row">
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button is-small is-danger delete-button">
+                            <span>Deletar</span>
+                            <span class="icon is-small">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                        </a>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </template>
+
+    <script src="scripts/options.js"></script>
+</body>
+
+</html>

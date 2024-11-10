@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero.is-info {
+    background-color: rgb(167, 21, 21);
+    color: white;
+    padding: 3rem 1.5rem;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#header .icon {
+    margin-right: 10px;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+.button {
+    background-color: #3273dc;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #2a62c2;
+}
+
+.button.is-success {
+    background-color: #23d160;
+}
+
+.button.is-danger {
+    background-color: #ff3860;
+}
+
+.help.is-danger {
+    color: red;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.is-6 {
+    padding: 1rem;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.field {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#domain-error,
+#path-error {
+    display: none;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.level-item {
+    flex: 1;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet Blocker</title>
+
+    <!-- Bulma CSS Framework -->
+    <link rel="stylesheet" href="styles/bulma.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/popup.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            color: #4a4a4a;
+        }
+
+        .hero.is-info {
+            background-color: rgb(167, 21, 21);
+            color: white;
+            border-radius: 8px 8px 0 0;
+            padding: 1.5rem 0;
+        }
+
+        .hero .title {
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero .icon {
+            margin-right: 10px;
+        }
+
+        #status-buttons {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem
+        }
+
+        .button {
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button.is-info {
+            background-color: rgb(167, 21, 21);
+            color: white;
+        }
+
+        .button.is-danger {
+            background-color: rgb(167, 21, 21);
+            color: white;
+        }
+
+        #options-link {
+            display: block;
+            margin-top: 2rem;
+            text-decoration: none;
+            color: #48c78e;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #options-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="has-text-centered">
+    <section class="hero is-info is-bold">
+        <h1 class="title is-4">
+            <span>Bet Blocker</span>
+        </h1>
+    </section>
+
+    <div id="status-buttons" class="buttons field has-addons">
+        <p class="control">
+            <a id="on-button" class="button is-on">On</a>
+        </p>
+        <p class="control">
+            <a id="off-button" class="button is-off">Off</a>
+        </p>
+    </div>
+
+    <a id="options-link">Configurações</a>
+
+    <script src="scripts/popup.js"></script>
+</body>
+
+</html>

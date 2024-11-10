@@ -1,0 +1,40 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    min-width: 300px;
+}
+
+.hero {
+    margin-bottom: 1em;
+}
+
+h1 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+#status-buttons, #confirm-buttons {
+    justify-content: center;
+}
+
+#confirm-buttons {
+    margin-top: 15px;
+}
+
+.button {
+    min-width: 100px;
+}
+
+#on-button, #off-button {
+    min-width: 55px;
+}
+
+#are-you-sure {
+    display: none;
+}
+
+img {
+    max-width: 150px;
+}

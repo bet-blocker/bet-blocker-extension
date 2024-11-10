@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "BetBlocker",
+  "version": "1.0.1",
+  "description": "Block bet websites.",
+  "icons": {
+    "16": "images/icon-16-on.png",
+    "48": "images/icon-48-on.png",
+    "128": "images/icon-128-on.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon-16-on.png",
+      "48": "images/icon-48-on.png",
+      "128": "images/icon-128-on.png"
+    },
+    "default_title": "BetBlocker",
+    "default_popup": "popup.html"
+  },
+  "author": {
+    "email": "eduardorigom@gmail.com"
+  },
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": false,
+    "chrome_style": false,
+    "open_in_tab": true
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "downloads",
+    "storage",
+    "webNavigation"
+  ],
+  "web_accessible_resources": [
+    "blocked.json"
+  ]
+}
